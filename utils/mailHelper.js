@@ -3,11 +3,10 @@ import config from "../config/index.js";
 
 const mailHelper = async (options) => {
   const message = {
-    from: config.SMPT_MAIL_EMAIL, // sender address
-    to: options.email, // list of receivers
-    subject: options.subject, // Subject line
-    text: options.text, // plain text body
-    // html: "<b>Hello world?</b>", // html body
+    from: config.SMPT_MAIL_EMAIL,
+    to: options.email,
+    subject: options.subject,
+    text: options.text,
   };
   await transporter.sendMail(message);
 };
